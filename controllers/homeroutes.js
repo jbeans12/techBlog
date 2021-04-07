@@ -1,5 +1,9 @@
 const router = require('express').Router();
 
+const { Users } = require('../models')
+
+
+
 router.get('/', async (req, res) => {
 
   res.render('homepage');
