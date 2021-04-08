@@ -6,7 +6,7 @@ const signupForm = async (event) => {
     const verifyPassword = document.querySelector('#verifyPassword').value.trim(); //we will use this to verify password
     const name = document.querySelector('#nameSignup').value.trim();
 
-    if (type && email && password && name){
+    if (email && password && name){
         console.log("you done did it!!");
         fetch('/api/users', {
             method: 'POST',
@@ -17,7 +17,7 @@ const signupForm = async (event) => {
                return response.json();
 
         }).then(data => {
-            fetch('/api/post', {
+            fetch('/api/users', {
                 method: 'POST',
                 body: JSON.stringify({ title, post, user_id: data.id}),
                 headers: {'Content-Type': 'application/json'},
