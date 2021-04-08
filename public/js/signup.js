@@ -24,7 +24,7 @@ const signupForm = async (event) => {
 
         }).then(response => {
             if (response.ok) {
-                document.location.replace('/profile'); 
+                document.location.replace('/'); 
             } else {
                 alert('Failed to sign-up :(');
                 } 
