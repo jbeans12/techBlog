@@ -40,4 +40,4 @@ let loginForm = async (event) => {
 
 document
   .querySelector('.loginForm')
-  .addEventListener(loginForm);
+  .addEventListener('submit', loginForm);

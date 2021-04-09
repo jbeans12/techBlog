@@ -23,4 +23,4 @@ const newBlog = async (event) => {
     }
 
 
-document.addEventListener('submit');
+document.addEventListener('submit', newBlog);
