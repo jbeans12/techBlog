@@ -10,7 +10,7 @@ const login = require('./login');
 
 router.use('/', homeRoutes);
 
-router.use('./api', apiRoutes);
+router.use('/api', apiRoutes);
 
 router.use('/signup', signup);
 

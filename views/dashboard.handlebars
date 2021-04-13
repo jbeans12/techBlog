@@ -1,13 +1,25 @@
 <h1>Blogdiddyblogblog</h1>
-<div>
-<form class="postForm" >
-<label for="title"></label>
-<input class="formInput" type="text" id="title" placeholder="Post Title"/>
-<label for="post"></label>
-<textarea class="formInput" type="text" id="post" rows="4" cols="50" placeholder="Type Something Cool Here"></textarea>
-  <br><br>
+
+
+  <form class="postForm" >
+    <label for="title"></label>
+      <input class="formInput" type="input" id="title" placeholder="Post Title"/>
+        <label for="post"></label>
+
+      <input class="formInput" type="input" id="post" rows="4" cols="25" placeholder="Type Something Cool Here"></input>
+       <br><br>
+  
   <button type="submitbtn" value="submit">Submit</button>
+
 </form>
-</div>
+
+
+{{#each post as |post| }}
+
+<h1>Title of post:{{title}}</h1> 
+
+<p>Post Content: {{content}}</p>
+
+{{/each}}
 
 <script src="./js/post.js"></script>
