@@ -1,18 +1,20 @@
-const newBlog = async (event) => {
-    event.preventDefault();
+const newBlog = async (submit) => {
+    submit.preventDefault();
 
-    const submitPost = document.querySelector('#posted');
-    const postTitle = document.querySelector('#title');
+    const submitPost = document.querySelector('#post').value;
+    const postTitle = document.querySelector('#title').value;
 
     if(submit) {
-        fetch('/api/post', {
+        let obj= {title:postTitle, content:submitPost}
+       const newPost = await fetch('/post', {
             method: 'POST',
-            body: JSON.stringigy({ postTitle, submitPost }),
+            body: JSON.stringify(obj),
             headers: {'Content-Type': 'application/json'},
-        })
-        .then(response =>
-            response.json())
-        .then(response => {
+        });
+
+        if (response =>
+            response.json ());
+            (response => {
             if (response.ok) {
                 document.location.replace('/dashboard')
             } else {
